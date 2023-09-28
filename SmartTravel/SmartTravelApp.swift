@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
+import Firebase
 
 @main
 struct SmartTravelApp: App {
@@ -15,6 +17,10 @@ struct SmartTravelApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .onAppear {
+                    FirebaseApp.configure() // Initialize Firebase when ContentView appears
+                }
         }
     }
 }
+

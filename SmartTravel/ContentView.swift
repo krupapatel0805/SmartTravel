@@ -7,6 +7,8 @@
 
 import SwiftUI
 import CoreData
+import Firebase
+import FirebaseFirestore
 
 struct ContentView: View {
     private let splashDuration: Double = 2.0
